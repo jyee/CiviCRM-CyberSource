@@ -1,10 +1,9 @@
 <?php
 
 /**
- *
  * CyberSource payment gateway integration
  * @package CRM
- * @author Jason Yee <jyee@atendesigngroup.com>
+ * @author Jason Yee <jason@atendesigngroup.com>
  * www.atendesigngroup.com
  */
 

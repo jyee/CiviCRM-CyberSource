@@ -1,19 +1,5 @@
 <?php
 
-/*
- * Copyright (C) 2007
- * Licensed to CiviCRM under the Academic Free License version 3.0.
- *
- * Written and contributed by Ideal Solution, LLC (http://www.idealso.com)
- *
- */
-
-/**
- * @package CRM
- * @author Marshal Newrock <marshal@idealso.com>
- * $Id: CyberSource.php 9800 2007-06-07 02:46:32Z marshal $
- **/
-
 require_once 'CRM/Core/Payment/CyberSource.php';
 
 class CRM_Event_Payment_CyberSource extends CRM_Core_Payment_CyberSource {
