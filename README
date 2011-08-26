@@ -1,0 +1,27 @@
+This information is adapted from http://forum.civicrm.org/index.php/topic,15719.msg67324.html
+This CyberSource code was written for CiviCRM 3.2. There has been a lot of movement around packages and payment processors in subsequent CiviCRM versions, so this processor may not work beyond 3.2.  If it doesn't hopefully this code will be of some use to create a newer version.
+
+Use the cybersource.sql file to add the CyberSource processor to the civicrm_payment_processor_type table.
+Copy the files into their corresponding folders in CiviCRM.
+
+After you've copied the files, you'll need to:
+
+1. log into https://ebc.cybersource.com and go to Tools & Settings >> Hosted Order Page >> Security.  Generate the PHP security script (it'll give you a file called HOP.php).
+
+2. If you're using Drupal, rename the L() function and all calls to the function to csL().  You can do a find and replace changing "L(" to "csL(".  At this time, there should be 4 replacements.
+
+3 (optional). If you use the Drupal Devel module, you should also rename the dd() function to csdd().
+
+4. Put the HOP.php file in the civicrm/packages/CyberSource directory.
+
+5. In https://ebc.cybersource.com, go to Tools & Settings >> Hosted Order Page >> Settings.  Set the following items:
+
+Receipt Response URL: http://www.yourdomain.com
+Check "This URL is my custom receipt page"
+Decline Response URL: http://www.yourdomain.com
+Check "This URL is my custom receipt page"
+Check "Merchant POST URL"
+Enter "http://www.yourdomain.com" into the merchant post field
+Click the Update button to save your changes
+
+and of course, change www.yourdomain.com for whatever your actual domain is.  It's not critical, since the url is not used, but just in case some error occurs you don't want your user's transaction info sent to another domain.
