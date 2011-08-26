@@ -25,3 +25,6 @@ Enter "http://www.yourdomain.com" into the merchant post field
 Click the Update button to save your changes
 
 and of course, change www.yourdomain.com for whatever your actual domain is.  It's not critical, since the url is not used, but just in case some error occurs you don't want your user's transaction info sent to another domain.
+
+For more information about CiviCRM 3.2 payment processors, reference the documentation here:
+http://wiki.civicrm.org/confluence/display/CRMDOC32/Creating+Additional+Payment+Processor+Plugins
